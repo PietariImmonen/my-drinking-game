@@ -1,25 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import { Amplify, API, graphqlOperation } from 'aws-amplify';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+import { createTask } from './graphql/mutations';
 
-export default App;
+import awsExports from './aws-exports';
+import { useEffect, useState } from 'react';
+
+
+import { listTasks } from './graphql/queries';
+
+
+Amplify.configure(awsExports);
+//Xbm$zMjRtJBN3Kn
+function App({user, signOut}) {
+
+  const [tasks, setTasks] = useState([]);
+  const [task, setTask] = useState([]);
+
+  const random = Math.floor(Math.random() * tasks.length);
+
+    function randomTask() {
+      setTask([tasks[1]])
+      console.log(tasks[random])
+    }
+
+    useEffect( () => {
+
+      
+
+      async function createTaskItem() { 
+        const task = { name: "Juo", description: "Ota pari hörppyy!" };
+        await API.graphql(graphqlOperation(createTask, {input: task}));
+      }
+
+
+      async function listTaskItem() {
+
+        const tasks = await API.graphql(graphqlOperation(listTasks));
+        console.log(30, tasks.data.listTasks.items);
+        setTasks(tasks.data.listTasks.items);
+      }
+      listTaskItem();
+    }, [])
+
+    return (
+      <>
+        <button onClick={signOut}>Sign out</button>
+
+        {task.map((task, index) => (
+          <div key = {index}>
+            {task.name} = {task.description}
+          </div>
+        ))}
+        <button onClick={randomTask}>Pick random task</button>
+
+      </>
+    );
+  }
+
+  export default withAuthenticator(App);

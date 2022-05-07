@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "mydrinkinggame",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/pietariimmonen/my-drinking-game/amplify/backend/api/mydrinkinggame/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authmydrinkinggame727a62a8"
+    }
+  }
+}

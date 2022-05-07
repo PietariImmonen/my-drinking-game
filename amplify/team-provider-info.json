@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mydrinkinggame-dev-182700-authRole",
+      "UnauthRoleArn": "arn:aws:iam::785847544870:role/amplify-mydrinkinggame-dev-182700-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::785847544870:role/amplify-mydrinkinggame-dev-182700-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-mydrinkinggame-dev-182700-deployment",
+      "UnauthRoleName": "amplify-mydrinkinggame-dev-182700-unauthRole",
+      "StackName": "amplify-mydrinkinggame-dev-182700",
+      "StackId": "arn:aws:cloudformation:eu-north-1:785847544870:stack/amplify-mydrinkinggame-dev-182700/253aba00-ce1a-11ec-97b2-069b2af4b408",
+      "AmplifyAppId": "d1adgxrkzztozi"
+    },
+    "categories": {
+      "auth": {
+        "mydrinkinggame727a62a8": {}
+      }
+    }
+  }
+}
