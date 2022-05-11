@@ -20,16 +20,11 @@ export default function Game() {
   const random = Math.floor(Math.random() * tasks.length);
 
     function randomTask() {
-      setTask([tasks[1]])
+      setTask([tasks[random]])
       console.log(tasks[random])
     }
 
     useEffect( () => {
-
-      async function createTaskItem() { 
-        const task = { name: "Juo", description: "Ota pari hörppyy!" };
-        await API.graphql(graphqlOperation(createTask, {input: task}));
-      }
 
 
       async function listTaskItem() {
