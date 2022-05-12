@@ -52,5 +52,6 @@ body {
 
 .game-main-task {
     color: white;
-    font-size: 56px;
+    font-size: 40px;
+    margin: 1rem;
 }
