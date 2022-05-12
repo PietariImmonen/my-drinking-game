@@ -56,6 +56,11 @@ body {
         height: 400px;
     }
     .game-main-task {
-        font-size: 25px;
+        font-size: 20px;
+    }
+    .game-main {
+        padding-top: 15vh;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
   }
