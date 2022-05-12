@@ -12,6 +12,7 @@ import Admin from './Admin';
 
 Amplify.configure(awsExports);
 //Xbm$zMjRtJBN3Kn
+//rVYdX7iT9ydmMAt
 //<button onClick={signOut}>Sign out</button>
 function App({signOut}) {
     return (

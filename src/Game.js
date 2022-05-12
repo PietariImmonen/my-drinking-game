@@ -37,22 +37,22 @@ export default function Game() {
     return (
       <>
 
-    <div className="menu-nav">
-        <div className="menu-nav-text">
-            Normal
-        </div>
-
-    </div>
-
-    <div className='game-main'>
-      <div className='game-main-container' onClick={randomTask}>
-          {task.map((task, index) => (
-            <div key = {index} className="game-main-task">
-              {task.description}
+        <div className="menu-nav">
+            <div className="menu-nav-text">
+                Normal
             </div>
-          ))}
+
         </div>
-    </div>
+
+        <div className='game-main'>
+          <div className='game-main-container' onClick={randomTask}>
+              {task.map((task, index) => (
+                <div key = {index} className="game-main-task">
+                  {task.description}
+                </div>
+              ))}
+            </div>
+        </div>
       </>
     );
   }

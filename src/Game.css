@@ -49,3 +49,13 @@ body {
     font-size: 40px;
     margin: 1rem;
 }
+
+@media screen and (max-width: 600px) {
+    .game-main-container {
+        width: 400px;
+        height: 400px;
+    }
+    .game-main-task {
+        font-size: 25px;
+    }
+  }
