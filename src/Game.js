@@ -39,7 +39,7 @@ export default function Game() {
 
         <div className="menu-nav">
             <div className="menu-nav-text">
-                Normal
+              PT's drinking game
             </div>
 
         </div>
