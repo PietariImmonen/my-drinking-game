@@ -1,12 +1,10 @@
 import { Amplify, API, graphqlOperation } from 'aws-amplify';
-import { createTask } from './graphql/mutations';
 
 import awsExports from './aws-exports';
 import { useEffect, useState } from 'react';
 
 
 import { listTasks } from './graphql/queries';
-import { Link } from "react-router-dom";
 
 import "./Game.css"
 
@@ -35,11 +33,6 @@ export default function Game() {
       }
       listTaskItem();
     }, [])
-
-    const style = {
-      color: 'white',
-      textDecoration: 'none'
-  }
 
     return (
       <>
