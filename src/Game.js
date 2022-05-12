@@ -48,9 +48,6 @@ export default function Game() {
         <div className="menu-nav-text">
             Normal
         </div>
-          <div className='menu-click'>
-            Click to get back to menu
-          </div>
 
     </div>
 
