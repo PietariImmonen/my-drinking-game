@@ -13,7 +13,6 @@ import Admin from './Admin';
 Amplify.configure(awsExports);
 //Xbm$zMjRtJBN3Kn
 //rVYdX7iT9ydmMAt
-//<button onClick={signOut}>Sign out</button>
 function App({signOut}) {
     return (
       <Router>
@@ -23,7 +22,9 @@ function App({signOut}) {
             <Route path='/admin' element={<Admin />} />
           </Routes>
         </div>
+        <button onClick={signOut}>Sign out</button>
       </Router>
+      
     );
   }
 
